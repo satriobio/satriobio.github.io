@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link id="style" href="/static/css/dark.css" rel="stylesheet">
+    <link id="style" href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link id="style" href="/static/css/style.css" rel="stylesheet">
+
+</head>
+
+<nav style="display:flex">
+    <h3></h3>
+    <!-- <button class="bare" id="switch" aria-label="Switch theme"> -->
+    <button id="switch" aria-label="Switch theme" style="position: fixed; top: 50px; right: 50px; margin: 0px; padding: 10px; line-height: 1;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+    </button>
+</nav>
+
+<script>
+    //function that changes the theme, and sets a localStorage variable to track the theme between page loads
+    function switchTheme(e) {
+        console.log('click')
+        var style = document.getElementById("style")
+        if (style.href.match("/static/css/light.css")) document.getElementById("style").setAttribute("href", "/static/css/dark.css")
+        else if (style.href.match("/static/css/dark.css")) document.getElementById("style").setAttribute("href", "/static/css/light.css")
+    }
+
+    //listener for changing themes
+    document.querySelector('#switch').addEventListener('click', switchTheme);
+    
+</script>
+
+<body>
+    
+    <ul class="center nav">
+    
+        <li><a href="/">Home</a></li>
+    
+
+    
+        
+    
+        
+            <li><a href="/projects">Projects</a></li>
+        
+    
+        
+            <li><a href="/resume">Résumé</a></li>
+        
+    
+        
+            <li><a href="/misc">Misc</a></li>
+        
+    
+</ul>
+
+    <h1>About Me</h1>
+<p>Experienced molecular biologist with exceptional passion and talent in technology.
+Adept in learning new method and skills necessary in tackling ambitious tasks.</p>
+
+
+</body>
+
+<footer class="center">
+    <p><a href="#">Satrio Wibowo</a> © 2022 <br>
+    water's eleven theme by <a href="#">satriobio</a></p>
+</footer>
+
+</html>
+

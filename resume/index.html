@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link id="style" href="/static/css/dark.css" rel="stylesheet">
+    <link id="style" href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link id="style" href="/static/css/style.css" rel="stylesheet">
+
+</head>
+
+<nav style="display:flex">
+    <h3></h3>
+    <!-- <button class="bare" id="switch" aria-label="Switch theme"> -->
+    <button id="switch" aria-label="Switch theme" style="position: fixed; top: 50px; right: 50px; margin: 0px; padding: 10px; line-height: 1;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+    </button>
+</nav>
+
+<script>
+    //function that changes the theme, and sets a localStorage variable to track the theme between page loads
+    function switchTheme(e) {
+        console.log('click')
+        var style = document.getElementById("style")
+        if (style.href.match("/static/css/light.css")) document.getElementById("style").setAttribute("href", "/static/css/dark.css")
+        else if (style.href.match("/static/css/dark.css")) document.getElementById("style").setAttribute("href", "/static/css/light.css")
+    }
+
+    //listener for changing themes
+    document.querySelector('#switch').addEventListener('click', switchTheme);
+    
+</script>
+
+<body>
+    
+    <ul class="center nav">
+    
+        <li><a href="/">Home</a></li>
+    
+
+    
+        
+            <li><a href="/about">About</a></li>
+        
+    
+        
+            <li><a href="/projects">Projects</a></li>
+        
+    
+        
+    
+        
+            <li><a href="/misc">Misc</a></li>
+        
+    
+</ul>
+
+    <h1>Résumé</h1>
+<h2 class="">Satrio Wibowo</h2>
+<!-- <h3 class="" style="font-weight: 400;">Bioinformatics</h3> -->
+<p class="">Experienced molecular biologist with exceptional passion and talent in technology. Adept in learning new method and skills necessary in tackling ambitious tasks.</p>
+<p><a class="fa fa-github social" href="https://github.com/enzimatik"></a><a class="fa fa-linkedin social" href="https://www.linkedin.com/in/satriobiology/"></a><a class="fa fa-at social" href="mailto:satrio.biology@yahoo.com"></a></p>
+<hr>
+<div class="">
+<h2>Experienced in</h2>
+<ul>
+<li>Molecular Bioloy (qPCR, Fragment Analysis, Sequencing)</li>
+<li>Bioinformatics (HRM, NGS)</li>
+<li>Statistics and machine learning (Regression Analysis, Mask RCNN)</li>
+<li>Software & API development (Flask, Django RShiny, Docker)</li>
+<li>Cloud computing (Heroku, Firebase, AWS)</li>
+</ul>
+<hr>
+<h2>Working Experience</h2>
+<div class="row">
+<div class="column-20">
+2020-Present
+</div>
+<div class="column-80">
+<h3>Researcher</h3>
+<h3>PT. PathGen Diagnostik Teknologi</h3>
+<ul>
+<li>Develop analysis software for high resolution melting (HRM) experiment. Openmelt served as accompanying software for PCR-HRM molecular diagnostics kit.<br><a href="https://github.com/enzimatik/openmelt">https://github.com/enzimatik/openmelt</a></li>
+</ul>
+<ul>
+<li>Develop analysis pipeline for large-set molecular data (HRM & NGS) and clinicopathology data from colorectal cancer patient.<br><a href="https://github.com/enzimatik/gtsumeasy">https://github.com/enzimatik/gtsumeasy</a></li>
+</ul>
+<ul>
+<li>Develop and manage machine learning solutions for enabling faster diagnosis and biomarker analysis.<br><a href="https://deepglioma.herokuapp.com/">https://deepglioma.herokuapp.com/</a></li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="column-20">
+2020
+</div>
+<div class="column-80">
+<h3>COVID-19 Testing Team</h3>
+<h3>BSL3 Facility, Indonesian Institute of Science</h3>
+<ul>
+<li>Responsible in routine clinical samples testing for COVID-19 and whole genome sequencing. WGS analysis done using Oxford Nanopore's MinION sequencing platform and ARTIC pipeline.<br><a href="EPI_ISL_833506">EPI_ISL_833506</a></li>
+</ul>
+<ul>
+<li>Analyse publicly available COVID-19 sequence data using python and R libraries to generate insight for exposure pattern among Asian countries.<br><a href="https://doi.org/10.3390/v14040778">https://doi.org/10.3390/v14040778</a></li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="column-20">
+2018-2019
+</div>
+<div class="column-80">
+<h3>Researcher Assistant, Bioinformatics</h3>
+<h3>PT. Aretha Medika Utama</h3>
+<ul>
+<li>Develop bioinformatic analysis pipeline for analysing potential natural compound against aging and cancer related markers.<br><a href="http://dx.doi.org/10.2306/scienceasia1513-1874.2019.45.452">http://dx.doi.org/10.2306/scienceasia1513-1874.2019.45.452</a></li>
+</ul>
+</div>
+</div>
+<hr>
+<h2>Featured Publication</h2>
+<div class="row">
+<div class="column-20">
+2021
+</div>
+<div class="column-80">
+<p style="margin-top:0">Susanti, S., Wibowo, S., Akbariani, G., Yoshuantari, N., Heriyanto, D. S., Ridwanuloh, A. M., Hariyatun, H., Handaya, A. Y., Kurnianda, J., Hutajulu, S. H., & Ilyas, M. (2021). Molecular Analysis of Colorectal Cancers Suggests a High Frequency of Lynch Syndrome in Indonesia. Cancers, 13(24), 6245. https://doi.org/10.3390/cancers13246245</p>
+</div>
+</div>
+<div class="row">
+<div class="column-20">
+2022
+</div>
+<div class="column-80">
+<p style="margin-top:0">Cahyani, I., Putro, E. W., Ridwanuloh, A. M., Wibowo, S., Hariyatun, H., Syahputra, G., Akbariani, G., Utomo, A. R., Ilyas, M., Loose, M., Kusharyoto, W., & Susanti, S. (2022). Genome Profiling of SARS-CoV-2 in Indonesia, ASEAN and the Neighbouring East Asian Countries: Features, Challenges and Achievements. Viruses, 14(4), 778. https://doi.org/10.3390/v14040778</p>
+</div>
+</div>
+<hr>
+<h2>Education</h2>
+<div class="row">
+<div class="column-20">
+2014-2018
+</div>
+<div class="column-80">
+<h3>Bachelor of Science (B.Sc.) in Biology</h3>
+<h3>Universitas Pendidikan Indonesia</h3>
+</div>
+</div>
+</div>
+
+
+</body>
+
+<footer class="center">
+    <p><a href="#">Satrio Wibowo</a> © 2022 <br>
+    water's eleven theme by <a href="#">satriobio</a></p>
+</footer>
+
+</html>
+
